@@ -1,6 +1,4 @@
-.PHONY : clean
-
-all : player player.o ringmaster ringmaster.o helper.o potato.o
+0;10;1c0;10;1c0;10;1c0;10;1call : player player.o ringmaster ringmaster.o helper.o potato.o
 
 player : player.o potato.h helper.o helper.h potato.o
 	gcc -o player player.o potato.h helper.o helper.h potato.o
@@ -21,7 +19,7 @@ potato.o : potato.c potato.h
 	gcc -c potato.c potato.h
 
 clean:
-	rm -f *~ *.o *.so
+	rm -f *~ *.o *.h.gch
 
 clobber:
 	rm -f *~ *.o
